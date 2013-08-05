@@ -1,0 +1,7 @@
+parameters:
+#    ku_menu.example.class: KuManuel\Bundle\MenuBundle\Example
+
+services:
+#    ku_menu.example:
+#        class: %ku_menu.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,11 @@
+{
+    "name": "manuelj555/menu-bundle",
+    "require": {
+        "php": ">=5.3.3",
+        "knplabs/knp-menu-bundle": "v1.1.2"
+    },
+    "autoload": {
+        "psr-0": { "KuManuel\\Bundle\\MenuBundle\\": "" }
+    },
+    "target-dir": "KuManuel/Bundle/MenuBundle"
+}
