@@ -1,7 +1,9 @@
 parameters:
-#    ku_menu.example.class: KuManuel\Bundle\MenuBundle\Example
+    ku_menu.yml_provider.class: KuManuel\Bundle\MenuBundle\Menu\Provider\YmlProvider
 
 services:
-#    ku_menu.example:
-#        class: %ku_menu.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    ku_menu.yml_provider:
+        class: %ku_menu.yml_provider.class%
+        arguments: ["@knp_menu.factory", %ku_menu.menus%]
+        tags:
+            - { name: knp_menu.provider }

@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\Loader;
  */
 class KuMenuExtension extends Extension
 {
+
     /**
      * {@inheritDoc}
      */
@@ -21,10 +22,11 @@ class KuMenuExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
-        
-        var_dump($config['menus']['admin']['inicio']);die;
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $container->setParameter('ku_menu.menus', $config['menus']);
+
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yml');
     }
+
 }
